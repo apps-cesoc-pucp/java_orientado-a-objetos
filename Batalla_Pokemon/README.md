@@ -10,11 +10,15 @@ __ATRIBUTOS__
 - [ ] nombre    (String)
 - [ ] ataque    (int)
 - [ ] defensa   (int)
-- [ ] vida      (String)
+- [ ] vida      (int)
 
 **OBSERVACIÓN:** Recuerda realizar el __Encapsulamiento__ a los atributos de tu 
 Pokemon, no querrás que otro entrenador Pokemon modifique directamente los puntos 
 de vida de tu Pokemon. (Getters y Setters para los atributos con acceso Private)
+  
+  __CONSTRUCTOR__
+  - [ ] Pokemon(String, int, int, int)<br>
+  Este constructor debe recibir todos los datos necesarios del pokemon a crear
   
  __MÉTODOS__
  - [ ] void atacar(Pokemon): <br>

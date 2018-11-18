@@ -1,22 +1,25 @@
 package Clases;
 
 public class Referi {
-    public Referi(){
+
+    public Referi() {
 
     }
-    public void presentarse(Pokemon uno, Pokemon dos){
+
+    public void presentarse(Pokemon uno, Pokemon dos) {
         System.out.print(
                 " /$$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$$ /$$      /$$  /$$$$$$  /$$   /$$\n" +
-                "| $$__  $$ /$$__  $$| $$  /$$/| $$_____/| $$$    /$$$ /$$__  $$| $$$ | $$\n" +
-                "| $$  \\ $$| $$  \\ $$| $$ /$$/ | $$      | $$$$  /$$$$| $$  \\ $$| $$$$| $$\n" +
-                "| $$$$$$$/| $$  | $$| $$$$$/  | $$$$$   | $$ $$/$$ $$| $$  | $$| $$ $$ $$\n" +
-                "| $$____/ | $$  | $$| $$  $$  | $$__/   | $$  $$$| $$| $$  | $$| $$  $$$$\n" +
-                "| $$      | $$  | $$| $$\\  $$ | $$      | $$\\  $ | $$| $$  | $$| $$\\  $$$\n" +
-                "| $$      |  $$$$$$/| $$ \\  $$| $$$$$$$$| $$ \\/  | $$|  $$$$$$/| $$ \\  $$\n" +
-                "|__/       \\______/ |__/  \\__/|________/|__/     |__/ \\______/ |__/  \\__/\n"
-                );
-        System.out.print("La batalla entre "+uno.getNombre()+" y "+dos.getNombre()+ " comenzará!");
+                        "| $$__  $$ /$$__  $$| $$  /$$/| $$_____/| $$$    /$$$ /$$__  $$| $$$ | $$\n" +
+                        "| $$  \\ $$| $$  \\ $$| $$ /$$/ | $$      | $$$$  /$$$$| $$  \\ $$| $$$$| $$\n" +
+                        "| $$$$$$$/| $$  | $$| $$$$$/  | $$$$$   | $$ $$/$$ $$| $$  | $$| $$ $$ $$\n" +
+                        "| $$____/ | $$  | $$| $$  $$  | $$__/   | $$  $$$| $$| $$  | $$| $$  $$$$\n" +
+                        "| $$      | $$  | $$| $$\\  $$ | $$      | $$\\  $ | $$| $$  | $$| $$\\  $$$\n" +
+                        "| $$      |  $$$$$$/| $$ \\  $$| $$$$$$$$| $$ \\/  | $$|  $$$$$$/| $$ \\  $$\n" +
+                        "|__/       \\______/ |__/  \\__/|________/|__/     |__/ \\______/ |__/  \\__/\n"
+        );
+        System.out.print("La batalla entre " + uno.getNombre() + " y " + dos.getNombre() + " comenzará!\n");
     }
+
     public void iniciarBatallaPokemon(Pokemon uno, Pokemon dos) {
         String primero = decidirPrimero(uno, dos);
         Pokemon ganador;
@@ -41,16 +44,16 @@ public class Referi {
         declararGanador(ganador);
     }
 
-    private String decidirPrimero(Pokemon uno, Pokemon dos){
-        int prim=(int)(Math.random()*100);
-        int seg=(int)(Math.random()*100);
-        String primero;
-        if(prim<seg) return dos.getNombre();
-        else return  uno.getNombre();
+    private String decidirPrimero(Pokemon uno, Pokemon dos) {
+        int prim = (int) (Math.random() * 100);
+        int seg = (int) (Math.random() * 100);
+
+        if (prim < seg) return dos.getNombre();
+        else return uno.getNombre();
     }
 
-    private void declararGanador(Pokemon pokemon){
-        System.out.print("El ganador es: "+pokemon.getNombre());
+    private void declararGanador(Pokemon pokemon) {
+        System.out.print("El ganador es: " + pokemon.getNombre());
     }
 
 }

@@ -1,6 +1,7 @@
 package Clases;
 
 public class Pokemon {
+
     private String nombre;
     private int ataque;
     private int defensa;
@@ -54,4 +55,5 @@ public class Pokemon {
     public void defenderse(Pokemon atacante){
         atacante.setAtaque(atacante.getAtaque()-(int)(this.getDefensa()*Math.random()));
     }
+
 }

@@ -17,7 +17,7 @@ public class Main {
         pikachu.setVida("100");
         pikachu.setDefensa(10);
         squirtle.setNombre("Squirtle");
-        squirtle.setAtaque(8);//Por algun motivo estos son los stats necesarios para que squirtle gane v:
+        squirtle.setAtaque(8);
         squirtle.setVida("120");
         squirtle.setDefensa(12);
         referi.presentarse(pikachu,squirtle);

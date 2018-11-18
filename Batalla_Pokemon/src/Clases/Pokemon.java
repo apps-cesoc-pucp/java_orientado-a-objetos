@@ -44,16 +44,16 @@ public class Pokemon {
     }
 
     public void atacar(Pokemon objetivo){
-        int daño;
+        int daño,aux;
+        aux=ataque;
         objetivo.defenderse(this);
-        daño=(int)(this.getAtaque()*(1+Math.random()/2));
-
-        objetivo.setVida(Integer.toString((Integer.parseInt(objetivo.getVida())-daño)));
-
+        daño=(int)(ataque*(1+Math.random()/2));
+        objetivo.vida=Integer.toString((Integer.parseInt(objetivo.vida)-daño));
+        ataque=aux;
     }
 
     public void defenderse(Pokemon atacante){
-        atacante.setAtaque(atacante.getAtaque()-(int)(this.getDefensa()*Math.random()));
+        atacante.ataque=atacante.ataque-(int)(defensa*Math.random());
     }
 
 }

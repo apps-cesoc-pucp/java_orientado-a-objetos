@@ -28,7 +28,7 @@ public class Referi {
         System.out.print("La batalla entre " + uno.getNombre() + " y " + dos.getNombre() + " comenzará!\n");
     }
 
-    public void iniciarBatallaPokemon(Pokemon uno, Pokemon dos) throws NullPointerException{
+    public void iniciarBatallaPokemon(Pokemon uno, Pokemon dos) {
         String primero = decidirPrimero(entrenador1, entrenador2);
         String segundo;
         String ganador;

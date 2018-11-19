@@ -5,7 +5,7 @@ import Clases.Referi;
 
 public class Main {
 
-    public static void main(String[] args) throws NullPointerException{
+    public static void main(String[] args) {
         // aquí sí podemos pelear, Vegeta
 
         Referi referi=new Referi();

@@ -5,7 +5,7 @@ import Clases.Referi;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NullPointerException{
         // aquí sí podemos pelear, Vegeta
 
         Referi referi=new Referi();
@@ -14,11 +14,11 @@ public class Main {
 
         pikachu.setNombre("Pikachu");
         pikachu.setAtaque(10);
-        pikachu.setVida("100");
+        pikachu.setVida("30");
         pikachu.setDefensa(10);
         squirtle.setNombre("Squirtle");
         squirtle.setAtaque(8);
-        squirtle.setVida("120");
+        squirtle.setVida("36");
         squirtle.setDefensa(12);
         referi.presentarse(pikachu,squirtle);
         referi.iniciarBatallaPokemon(pikachu,squirtle);

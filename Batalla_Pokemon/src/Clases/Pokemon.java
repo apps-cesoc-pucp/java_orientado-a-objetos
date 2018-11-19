@@ -43,10 +43,12 @@ public class Pokemon {
         this.vida = vida;
     }
 
-    public void atacar(Pokemon objetivo){
+    public void atacar(Pokemon objetivo,boolean defiende){
         int daño,aux;
         aux=ataque;
-        objetivo.defenderse(this);
+        if(defiende) {
+            objetivo.defenderse(this);
+        }
         daño=(int)(ataque*(1+Math.random()/2));
         objetivo.vida=Integer.toString((Integer.parseInt(objetivo.vida)-daño));
         ataque=aux;
@@ -54,6 +56,7 @@ public class Pokemon {
 
     public void defenderse(Pokemon atacante){
         atacante.ataque=atacante.ataque-(int)(defensa*Math.random());
+        if (atacante.ataque<0) atacante.ataque=0;
     }
 
 }
